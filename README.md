@@ -1,220 +1,87 @@
 ---
 
-## Release Description
+# Realme Unified Tool Pro 🛠️
 
-```
-
-A Windows-based Android flashing and utility toolkit designed for Realme and compatible Android devices.
-
-This build is fully portable.
-No installation required.
-ADB and Fastboot are bundled internally.
-
-──────────────────────────────
-WHAT’S INCLUDED
-──────────────────────────────
-
-• Device detection (ADB + Fastboot)
-• Port ROM IMG flasher
-• Custom ROM ADB sideload
-• Boot image flashing
-• IMEI backup & restore (Root required)
-• FRP removal
-• Battery health (Root / No-Root modes)
-• One-click ADB & Fastboot command panel
-• USB driver guide
-• Magisk channel integration
-
-──────────────────────────────
-REQUIREMENTS
-──────────────────────────────
-
-• Windows 10 / 11
-• Unlocked bootloader OR Root access
-• USB Debugging enabled
-• Use original USB cable
-
-──────────────────────────────
-WARNING
-──────────────────────────────
-
-Flashing operations can erase data and may brick devices if used incorrectly.
-
-Always back up your data before using this tool.
-
-Use at your own risk.
-
-──────────────────────────────
-Developer:
-Ayan  (@imnotaino)
-GitHub: sairb1
-──────────────────────────────
-```
+A powerful, modern Windows-based GUI toolkit designed for flashing, repairing, and optimizing Realme and compatible Android devices. Built with **Python** and **CustomTkinter** for a sleek, dark-mode experience.
 
 ---
 
-# 🔥 2️⃣ PROFESSIONAL README.md
+## 🌟 Key Features
 
-Paste this as your `README.md`.
+### ⚡ Device Diagnostics
 
----
+* **Real-time Detection:** Instant ADB and Fastboot status.
+* **Device Info:** Fetch Model, Android Version, Kernel, and Security Patch level.
+* **Bootloader Status:** Check if your device is ready for flashing.
 
-# Realme Unified Tool Pro
-Windows-based Android flashing and diagnostic toolkit built with Python and CustomTkinter.
+### 🔥 Advanced Flashing Engine
 
-Designed for Realme and compatible Android devices with:
+* **Port ROM (IMG) Flasher:** Specialized partition flashing (System, Product, Vendor, etc.) with smart logic for `my_manifest` variations.
+* **Dirty vs. Clean Flash:** Choose between keeping data or a fresh start.
+* **ADB Sideload:** Easy `.zip` flashing for Custom ROMs via Recovery (TWRP/OrangeFox).
+* **Boot Image Utility:** One-click `boot.img` flashing for rooting or kernel updates.
 
-* Unlocked Bootloader
-* OR Root access (Magisk / KSU / APatch)
+### 🛡️ IMEI & Partition Tools (Root Required)
 
----
+* **Safe Backup:** Backup critical network partitions: `nvram`, `nvdata`, `persist`, `nvcfg`, `protect1`, and `protect2`.
+* **Restore:** Restore connectivity in one click if partitions get corrupted.
 
-## Features
+### 🧹 Maintenance & FRP
 
-### ⚡ Device Check
+* **FRP Removal:** Fastboot-based Factory Reset Protection bypass.
+* **Data Wipe:** Clean `userdata`, `metadata`, and `frp` partitions securely.
 
-* Detect ADB & Fastboot devices
-* Model & Android version
-* Kernel & security patch
-* Bootloader lock status
+### 🔋 Battery Analytics
 
----
-
-### 🔥 Flash ROM
-
-**Port ROM IMG Flasher**
-
-* Flash multiple `.img` partitions
-* Optional userdata / metadata / FRP wipe
-* Smart reboot handling
-
-**Custom ROM (ADB Sideload)**
-
-* Supports `.zip`
-* Works with TWRP / OrangeFox / PBR
-* Guided sideload process
+* **Dual Mode:** Supports both ADB (Standard) and `su` (Root) for deep health metrics.
+* **Metrics:** View Design Capacity, Health %, Temperature, and Cycle Counts.
 
 ---
 
-### 🥾 Flash Boot Image
+## 🖥️ Modern Command Panel
 
-* Flash `boot.img` via fastboot
-* One-click execution
+Access essential ADB and Fastboot commands through a dedicated GUI console:
 
----
-
-### 📶 IMEI Backup & Restore (Root Required)
-
-Backs up:
-
-* nvram
-* nvdata
-* persist
-* nvcfg
-* protect1
-* protect2
-
-Backups are saved to PC.
-
-Never share IMEI backups.
+* **ADB:** `devices`, `reboot`, `reboot-bootloader`, `reboot-recovery`, `fastbootd`.
+* **Fastboot:** `devices`, `getvar all`, `reboot`, `erase partitions`.
 
 ---
 
-### 🗑 Remove FRP
+## 🚀 Getting Started
 
-* Erases FRP partition
-* Wipes userdata & metadata
-* Fastboot-based reset
+### Requirements
 
----
+* **OS:** Windows 10 or 11.
+* **Device:** Unlocked Bootloader (for flashing) or Root Access (for system tools).
+* **Setup:** USB Debugging enabled in Developer Options.
+* **Hardware:** Use the original OEM USB cable for stability.
 
-### 🔋 Battery Health
+### Installation
 
-Two modes:
-
-* ADB (No Root)
-* su -c (Root)
-
-Displays:
-
-* Charge level
-* Design capacity
-* Health %
-* Temperature
-* Voltage
-* Cycle count
+1. Download the latest `Realme_Unified_Tool_Pro.zip` from the [Releases]([https://www.google.com/search?q=https://github.com/sairb1/Realme-Unified-Tool-Pro/releases](https://github.com/Sairb1/RealmeUnifiedToolPro/releases/tag/v5.3)) section.
+2. Extract the folder to your Desktop.
+3. Run `RealmeTool.exe`. **No installation required.**
 
 ---
 
-### 💻 ADB & Fastboot Panel
+## ⚠️ Disclaimer
 
-Quick-access buttons for:
-
-ADB:
-
-* devices
-* reboot
-* bootloader
-* recovery
-* fastbootd
-
-Fastboot:
-
-* devices
-* reboot
-* erase partitions
-* getvar all
-
-Integrated console output.
+> **IMPORTANT:** Flashing operations are inherently risky. Using this tool may void your warranty, erase your data, or brick your device if used incorrectly.
+> **The developer (@imnotaino) is not responsible for any hardware damage or data loss.** Always maintain a backup of your important files before proceeding.
 
 ---
 
-### 🔌 USB Driver Guide
+## 🤝 Credits & Support
 
-* Step-by-step installation guide
-* Download links
-* Video reference
+* **Developer:** [Ayan (@imnotaino)](https://www.google.com/search?q=https://t.me/realme11x)
+* **GitHub:** [sairb1](https://www.google.com/search?q=https://github.com/sairb1)
+* **Community:** Join our [Telegram Channel](https://www.google.com/search?q=https://t.me/realme11x) for updates and support.
 
----
+**Built With:**
 
-## Download
-
-➡ Download the latest build from the **Releases** section.
-
----
-
-## Requirements
-
-* Windows 10 / 11
-* Unlocked bootloader OR Root
-* USB Debugging enabled
-* Proper USB drivers installed
+* [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - Modern GUI Library.
+* [Google Platform Tools](https://developer.android.com/studio/releases/platform-tools) - ADB & Fastboot binaries.
 
 ---
 
-## Disclaimer
-
-This tool performs low-level flashing operations.
-
-The developer is not responsible for:
-
-* Data loss
-* Bootloops
-* Device bricking
-* Warranty void
-
-Use responsibly.
-
----
-
-## Credits
-
-Developer:
-Ayan (@imnotaino)
-
-Built With:
-
-* Python 3
-* CustomTkinter
-* Android Platform Tools
-
+<p align="center">Made with ❤️ for the Realme Community</p>
