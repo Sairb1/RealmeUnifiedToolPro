@@ -1,94 +1,191 @@
----
+# 🛠️ Unified Tool Pro 
 
-# Unified Tool Pro 🛠️
-
-A powerful, modern Windows-based GUI toolkit designed for flashing, repairing, and optimizing Realme and compatible Android devices. Built with **Python** and **CustomTkinter** for a sleek, dark-mode experience.
+A modern, high-performance Android flashing and repair toolkit for **Realme and compatible devices**, built with Python and a refined architecture for stability, speed, and real-world usage.
 
 ---
 
-<img width="1477" height="951" alt="image" src="https://github.com/user-attachments/assets/94464f13-6221-4de6-8cb9-16a2a479e521" />
+## ⚡ What’s New?
+
+<img width="1439" height="854" alt="image" src="https://github.com/user-attachments/assets/b3a595a0-5720-4215-a9ec-86427dfd290c" />
+<img width="1439" height="848" alt="image" src="https://github.com/user-attachments/assets/6cbd9b24-98bd-4ffe-b96f-f86e74acdf50" />
 
 
-## 🌟 Key Features
+* Stable flashing engine (Port + Stock)
+* Fixed ADB/Fastboot reboot system
+* Improved payload dumper reliability
+* Cleaner UI with better interaction
+* Reduced lag, flicker, and UI glitches
+
+---
+
+## 🌟 Features
 
 ### ⚡ Device Diagnostics
 
-* **Real-time Detection:** Instant ADB and Fastboot status.
-* **Device Info:** Fetch Model, Android Version, Kernel, and Security Patch level.
-* **Bootloader Status:** Check if your device is ready for flashing.
+* Real-time ADB & Fastboot detection
+* Device info:
 
-### 🔥 Advanced Flashing Engine
+  * Model
+  * Android version
+  * Kernel
+  * Security patch
+* Bootloader status check
 
-* **Port ROM and Custom ROM (IMG) Flasher:** Can Flash PORT ROM(By Custom .imgs, also Custom Rom with .zip file.
-* **Dirty vs. Clean Flash:** Choose between keeping data or a fresh start.
-* **ADB Sideload:** Easy `.zip` flashing for Custom ROMs via Recovery (TWRP/OrangeFox).
-* **Boot Image Utility:** One-click `boot.img` flashing for rooting or kernel updates.
+---
 
-### 🛡️ IMEI & Partition Tools (Root Required)
+### 🔥 Flashing Engine
 
-* **Safe Backup:** Backup critical network partitions: `nvram`, `nvdata`, `persist`, `nvcfg`, `protect1`, and `protect2`.
-* **Restore:** Restore connectivity in one click if partitions get corrupted.
+#### 📦 Port ROM (IMG Flash)
 
-### 🧹 Maintenance & FRP
+* Flash custom `.img` files directly
+* Dynamic partition rebuild support
+* Only flashes **existing files** (safe logic)
 
-* **FRP Removal:** Fastboot-based Factory Reset Protection bypass.
-* **Data Wipe:** Clean `userdata`, `metadata`, and `frp` partitions securely.
+---
+
+#### 📱 Stock ROM (Payload / OTA)
+
+* Extracts `payload.bin` from OTA
+* Converts to `.img`
+* Automatically flashes valid partitions
+
+---
+
+#### 📲 ADB Sideload
+
+```bash
+adb sideload rom.zip
+```
+
+---
+
+#### 🥾 Boot Image Flash
+
+```bash
+fastboot flash boot boot.img
+```
+
+---
+
+### ⚡ Power Menu
+
+* System → `adb reboot`
+* Recovery → `adb reboot recovery`
+* Bootloader → `adb reboot bootloader`
+* Fastboot → `fastboot reboot`
+
+---
+
+### 🧩 Payload Dumper
+
+* Load `payload.bin` or OTA zip
+* View partitions
+* Extract selected partitions
+
+---
+
+### 🛡️ IMEI & Partition Tools (Root)
+
+* Backup:
+
+  * nvram
+  * nvdata
+  * persist
+  * nvcfg
+  * protect1 / protect2
+* Restore partitions
+
+---
+
+### 🧹 Maintenance
+
+* FRP removal
+* Wipe:
+
+  * userdata
+  * metadata
+  * frp
+
+---
 
 ### 🔋 Battery Analytics
 
-* **Dual Mode:** Supports both ADB (Standard) and `su` (Root) for deep health metrics.
-* **Metrics:** View Design Capacity, Health %, Temperature, and Cycle Counts.
+* ADB + Root support
+* Shows:
+
+  * Health %
+  * Temperature
+  * Cycle count
+  * Design capacity
 
 ---
 
-## 🖥️ Modern Command Panel
+### 💻 CMD Studio
 
-Access essential ADB and Fastboot commands through a dedicated GUI console:
+Run commands directly:
 
-* **ADB:** `devices`, `reboot`, `reboot-bootloader`, `reboot-recovery`, `fastbootd`.
-* **Fastboot:** `devices`, `getvar all`, `reboot`, `erase partitions`.
+```bash
+adb devices
+fastboot devices
+adb logcat
+adb shell
+```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Flashing Flow
 
-### Requirements
+### 🔥 Port ROM
 
-* **OS:** Windows 10 or 11.
-* **Device:** Unlocked Bootloader (for flashing) or Root Access (for system tools).
-* **Setup:** USB Debugging enabled in Developer Options.
-* **Hardware:** Use the original OEM USB cable for stability.
+```
+IMG folder → fastbootd → delete partitions → recreate → flash → reboot
+```
 
-### Installation
+---
 
-1. Download the latest `Realme_Unified_Tool_Pro.zip` from the [Releases]([https://www.google.com/search?q=https://github.com/sairb1/Realme-Unified-Tool-Pro/releases](https://github.com/Sairb1/RealmeUnifiedToolPro/releases/tag/v5.3)) section.
-2. Extract the folder to your Desktop.
-3. Run `RealmeTool.exe`. **No installation required.**
+### 📱 Stock ROM
+
+```
+ZIP → payload.bin → extract → flash imgs → reboot
+```
 
 ---
 
 ## ⚠️ Disclaimer
 
-> **IMPORTANT:** Flashing operations are inherently risky. Using this tool may void your warranty, erase your data, or brick your device if used incorrectly.
-> **The developer (@imnotaino) is not responsible for any hardware damage or data loss.** Always maintain a backup of your important files before proceeding.
+Flashing may:
+
+* Brick your device
+* Wipe data
+* Void warranty
+
+Use responsibly. Always keep backups.
 
 ---
 
-## 🤝 Credits & Support
+## 🖥️ Requirements
 
-* **Developer:** [Ayan ](https://www.instagram.com/@imnotaino)
-* **GitHub:** [sairb1](https://www.google.com/search?q=https://github.com/sairb1)
-* **Community:** Join our [Telegram Channel](https://www.google.com/search?q=https://t.me/realme11x) for updates and support.
-
-**Built With:**
-
-* [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - Modern GUI Library.
-* [Google Platform Tools](https://developer.android.com/studio/releases/platform-tools) - ADB & Fastboot binaries.
+* Windows 10 / 11
+* Unlocked bootloader
+* USB Debugging enabled
+* OEM USB cable
 
 ---
 
-<p align="center">Made with ❤️ for the Realme Community</p>
+## 📦 Installation
 
+1. Download latest release
+2. Extract ZIP
+3. Run `RealmeTool.exe`
 
+---
 
+## 🤝 Credits
 
+* Developer: Ayan (@imnotaino)
+* GitHub: sairb1
+* Community: Realme Telegram
+
+---
+
+---
