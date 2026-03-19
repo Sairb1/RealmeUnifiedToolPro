@@ -6,15 +6,17 @@ A modern, high-performance Android flashing and repair toolkit for **Realme and 
 
 ## ⚡ What’s New?
 
-<img width="1439" height="854" alt="image" src="https://github.com/user-attachments/assets/b3a595a0-5720-4215-a9ec-86427dfd290c" />
-<img width="1439" height="848" alt="image" src="https://github.com/user-attachments/assets/6cbd9b24-98bd-4ffe-b96f-f86e74acdf50" />
-
-
 * Stable flashing engine (Port + Stock)
 * Fixed ADB/Fastboot reboot system
 * Improved payload dumper reliability
 * Cleaner UI with better interaction
 * Reduced lag, flicker, and UI glitches
+
+<img width="1439" height="854" alt="image" src="https://github.com/user-attachments/assets/b3a595a0-5720-4215-a9ec-86427dfd290c" />
+<img width="1439" height="848" alt="image" src="https://github.com/user-attachments/assets/6cbd9b24-98bd-4ffe-b96f-f86e74acdf50" />
+
+
+
 
 ---
 
@@ -184,7 +186,6 @@ Use responsibly. Always keep backups.
 
 * Developer: Ayan (@imnotaino)
 * GitHub: sairb1
-* Community: Realme Telegram
 
 ---
 
