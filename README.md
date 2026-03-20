@@ -42,7 +42,7 @@ Whether you're flashing a ROM, fixing partitions, or debugging a device — ever
 * **macOS:** Unzip → Right-click → Open (first launch)
 
 * **Linux:**
-Rename it "UnifiedToolPro" and then run
+Rename it "UnifiedToolPro" and then cd "directory" where tool located then run
 
   ```bash
   chmod +x UnifiedToolPro
