@@ -110,15 +110,6 @@ Download and rename it to "UnifiedToolPro" and then cd "directory" where tool lo
 adb sideload rom.zip
 ```
 
----
-
-#### 🥾 Boot Image Flash
-
-```bash
-fastboot flash boot boot.img
-```
-
----
 
 ### ⚡ Power Menu
 
@@ -216,8 +207,6 @@ Flashing operations can:
 Use at your own risk. Always keep backups.
 
 ---
-
-## 🤝 Credits
 
 * Developer: Ayan (@imnotaino)
 * GitHub: sairb1
