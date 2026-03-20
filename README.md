@@ -2,6 +2,15 @@
 
 A modern, high-performance Android flashing and repair toolkit for **Realme and compatible devices**, built with Python and a refined architecture for stability, speed, and real-world usage.
 
+## Requirements
+
+| Requirement | Details |
+|---|---|
+| OS | Windows 10 / 11 (64-bit), Linux and MacOS |
+| USB Driver | ADB driver installed for your device |
+| Device | USB Debugging enabled (for ADB operations) |
+| Bootloader | Unlocked (for flashing operations) |
+
 ---
 
 ## ⚡ What’s New?
